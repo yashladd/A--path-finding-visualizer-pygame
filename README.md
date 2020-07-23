@@ -3,7 +3,7 @@ Implementation of the A* path finding algorithm visualizer
 
 
 ## Requirements:
-  - pygame
+  - pygame: pip install pygame
   
   
   ### Usage:
