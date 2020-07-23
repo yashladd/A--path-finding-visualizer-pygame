@@ -1,4 +1,4 @@
-# A--path-finding-visualizer-pygame
+# A*-path-finding-visualizer-pygame
 Implementation of the A* path finding algorithm visualizer
 
 
@@ -7,6 +7,7 @@ Implementation of the A* path finding algorithm visualizer
   
   
   ### Usage:
+    git clone the repo
     python main.py
     press [Left Click] to place nodes and barriers
     press [Right Click] to delete nodes and barriers
