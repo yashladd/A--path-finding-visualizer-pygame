@@ -117,6 +117,7 @@ def algorithm(draw, grid, start, end):
         open_set_hash.remove(current)
 
         if current == end:
+            # Draw path
             return True
 
         for neighbor in current.neighbors:
@@ -127,6 +128,18 @@ def algorithm(draw, grid, start, end):
                 g_score[neighbor] = temp_g_score
                 f_score[neighbor] = temp_g_score + \
                     h(neighbor.get_pos(), end.get_pos())
+                if neighbor not in open_set_hash:
+                    count += 1
+                    open_set.put((f_score[neighbor], count, neighbor))
+                    open_set_hash.add(neighbor)
+                    neighbor.make_open()
+
+        draw()
+
+        if current != start:
+            current.make_closed()
+
+    return False
 
 
 def make_grid(rows, width):
